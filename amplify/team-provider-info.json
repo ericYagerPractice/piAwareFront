@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-piawarefront-dev-222617-authRole",
+      "UnauthRoleArn": "arn:aws:iam::820626187184:role/amplify-piawarefront-dev-222617-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::820626187184:role/amplify-piawarefront-dev-222617-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-piawarefront-dev-222617-deployment",
+      "UnauthRoleName": "amplify-piawarefront-dev-222617-unauthRole",
+      "StackName": "amplify-piawarefront-dev-222617",
+      "StackId": "arn:aws:cloudformation:us-east-1:820626187184:stack/amplify-piawarefront-dev-222617/1810daa0-baa5-11eb-98d7-12010cdf73d7",
+      "AmplifyAppId": "d25cwosna09ilv"
+    }
+  }
+}
