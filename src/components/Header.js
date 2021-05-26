@@ -14,7 +14,6 @@ return (
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="/mapReactGL">Map</Nav.Link>
                     <Nav.Link href="https://github.com/ericYagerPractice/piAwareFront">Repo</Nav.Link>
-                    
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
