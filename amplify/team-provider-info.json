@@ -13,7 +13,14 @@
     },
     "categories": {
       "auth": {
-        "piawarefront4d6fdeb7": {}
+        "piawarefront4d6fdeb7": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "piAwareMiddleLayer": {
+          "deploymentBucketName": "amplify-piawarefront-dev-222617-deployment",
+          "s3Key": "amplify-builds/piAwareMiddleLayer-4c306c7152506e46455a-build.zip"
+        }
       }
     }
   }
