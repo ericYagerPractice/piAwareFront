@@ -12,8 +12,8 @@ return (
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="/map">Map</Nav.Link>
-                    <Nav.Link href="#repo">Repo</Nav.Link>
+                    <Nav.Link href="/mapReactGL">Map</Nav.Link>
+                    <Nav.Link href="https://github.com/ericYagerPractice/piAwareFront">Repo</Nav.Link>
                     
                 </Nav>
             </Navbar.Collapse>

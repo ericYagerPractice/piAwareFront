@@ -6,8 +6,7 @@ exports.handler = async function (event) {
   
   let res = '';
   
-  if ('Records' in event) {
-    
+  try{
     const graphqlClient = new appsync.AWSAppSyncClient({
       url: 'https://yoob6l7g3jbhne3esl2hhjkemy.appsync-api.us-east-1.amazonaws.com/graphql',
       region: 'us-east-1',
@@ -24,33 +23,16 @@ exports.handler = async function (event) {
       }
     }`;
 
-    for(const record of event.Records){
-      let dataHex = Buffer.from(record.Data, 'base64');
-      console.log(dataHex.toString('utf8'));
-      await graphqlClient.mutate({
+    let returnedUUID = await graphqlClient.mutate({
         mutation,
         variables: {
-          value: dataHex.toString('utf8')
+          value: event
         }
       });
-    }
-/*
-    event.Records.forEach(record => {
-      //console.log(record)
-      let dataHex = Buffer.from(record.Data, 'base64');
-      console.log(dataHex.toString('utf8'));
-      await graphqlClient.mutate({
-        mutation,
-        variables: {
-          value: dataHex.toString('utf8')
-        }
-      });
-      
-      //console.log('Kinesis Record: %j', record.Data);
-    }); */
-    res += 'Successfully processed DynamoDB record';
-  } else {
-    res += 'Kinesis records not present in event';
+    res+="Graphql operation executed successfully " + JSON.stringify(returnedUUID)
+  } 
+  catch(error){
+    res+="Error processing graphql mutation" + error
   }
 
   return Promise.resolve(res);

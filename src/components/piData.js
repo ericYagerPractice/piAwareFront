@@ -48,7 +48,6 @@ class PiClient extends React.Component{
                     <Card.Body>
                         <Card.Title>{this.props.name}</Card.Title>
                         <Card.Text> 
-                            { sensorData } { this.props.unit }
                         </Card.Text>
                     </Card.Body>
                 </Card>
