@@ -5,6 +5,8 @@ exports.handler = async function (event) {
   require('cross-fetch/polyfill');
   
   let res = '';
+
+  let dataJSON = "this should trigger something"
   
   try{
     const graphqlClient = new appsync.AWSAppSyncClient({
@@ -29,7 +31,7 @@ exports.handler = async function (event) {
           value: event
         }
       });
-    res+="Graphql operation executed successfully " + JSON.stringify(returnedUUID)
+    res+="Graphql operation executed successfully " + JSON.stringify(returnedUUID) + "for data: " + JSON.stringify(event)
   } 
   catch(error){
     res+="Error processing graphql mutation" + error

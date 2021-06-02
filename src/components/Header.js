@@ -1,20 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import {listAircraftDatas} from '../graphql/queries'
-import { API, graphqlOperation } from 'aws-amplify'
 
 
 export default function Header() { 
-
-    async function setAircraftData(){
-        let aircraftData = await API.graphql(graphqlOperation(listAircraftDatas))
-        console.log(aircraftData)
-    }
-
-    useEffect(() => {
-        setAircraftData()
-    },[])
 
     return (
         <>

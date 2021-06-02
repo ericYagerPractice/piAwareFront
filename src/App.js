@@ -9,8 +9,8 @@ import { Auth } from '@aws-amplify/auth'
 import { withAuthenticator } from 'aws-amplify-react'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 Amplify.configure(awsmobile);
+
 Auth.configure();
 
 //Auth.currentCredentials().then(creds => console.log(creds));

@@ -1,39 +1,42 @@
-import React, { useState, useRef, useEffect } from 'react';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-import '../staticfiles/Map.css'
- 
-mapboxgl.accessToken = "pk.eyJ1IjoiZXlhZ2VyMTciLCJhIjoiY2tvejVjeXMxMHJuMTJubGQyeXVzMjVpdyJ9.7k0GYXBDfDHC-HPrW3VKcQ"
+import React, { useState, useEffect } from 'react';
+import {getAircraftData } from '../graphql/queries'
+import {onCreateAircraftData} from '../customQueries/subscriptions'
+import { API, graphqlOperation } from 'aws-amplify'
 
 export default function Map() {
-  const mapContainer = useRef(null);
-  const map = useRef(null);
-  const lng  = useState(-70.9);
-  const lat  = useState(42.35);
-  const zoom  = useState(9);
-  /*const [viewport, setViewport] = useState({
-    width: 1400,
-    height: 1400,
-    latitude: 37.7577,
-    longitude: -122.4376,
-    zoom: 8,
-    mapboxApiAccessToken: "pk.eyJ1IjoiZXlhZ2VyMTciLCJhIjoiY2tvejVjeXMxMHJuMTJubGQyeXVzMjVpdyJ9.7k0GYXBDfDHC-HPrW3VKcQ"
-  });*/
+  const [aircraftData, setAircraftData]=useState("Data will show up here")
 
-  useEffect(() => {
-    if (map.current) return; // initialize map only once
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [lng, lat],
-      zoom: zoom
+  async function aircraftAPICall(){
+
+    await API.graphql(graphqlOperation(onCreateAircraftData)).subscribe({
+        next: ({ provider, value }) => {
+            API.graphql(graphqlOperation(getAircraftData, {id: value.data.onCreateAircraftData.id}))
+            .then(value=>{
+              setAircraftData(value.data.getAircraftData.data)
+              try{
+                console.log(value.data.getAircraftData.data)
+              }catch(error) {
+                console.log(error)
+              }
+            })
+            
+        },
+        error: error => console.log(error)
     });
+    
+}
+//
+//
+//
+//.replacingOccurrences(of: "(\\\"(.*?)\\\"|(\\w+))(\\s*:\\s*(\\\".*?\\\"|.))", with: "\"$2$3\"$4", options: .regularExpression)
 
-  })
+useEffect(() => {
+    aircraftAPICall()
+},[])
 
   return (
     <div>
-      <div ref={mapContainer} className="map-container" />
+      <p>{aircraftData}</p>
     </div>
   );
 }

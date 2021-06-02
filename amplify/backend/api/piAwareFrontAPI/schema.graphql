@@ -1,4 +1,4 @@
 type AircraftData @model {
   id: ID!
-  data: String!
+  data: String
 }
