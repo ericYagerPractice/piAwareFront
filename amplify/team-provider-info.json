@@ -19,7 +19,11 @@
       "function": {
         "piAwareMiddleLayer": {
           "deploymentBucketName": "amplify-piawarefront-dev-222617-deployment",
-          "s3Key": "amplify-builds/piAwareMiddleLayer-41496c6c4a6c6475724e-build.zip"
+          "s3Key": "amplify-builds/piAwareMiddleLayer-2f65554258484c625872-build.zip"
+        },
+        "piAwarePythonInvocation": {
+          "deploymentBucketName": "amplify-piawarefront-dev-222617-deployment",
+          "s3Key": "amplify-builds/piAwarePythonInvocation-596c5179447751645048-build.zip"
         }
       }
     }

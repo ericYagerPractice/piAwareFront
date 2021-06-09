@@ -6,7 +6,8 @@ exports.handler = async function (event) {
   
   let res = '';
 
-  let dataJSON = "this should trigger something"
+  let dataJSON = event
+  console.log(dataJSON)
   
   try{
     const graphqlClient = new appsync.AWSAppSyncClient({
