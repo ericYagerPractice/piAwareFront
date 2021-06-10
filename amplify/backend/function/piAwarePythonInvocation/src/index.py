@@ -4,6 +4,7 @@ from requests_aws4auth import AWS4Auth
 from gql import gql
 from gql.client import Client
 from gql.transport.requests import RequestsHTTPTransport
+import os
 
 def aircraftDataFunction(client, event):
     writeAircraftData = """
@@ -29,10 +30,12 @@ def aircraftDataFunction(client, event):
 
     return queryOperation
 
+
+
 def clientConfiguration():
     configDetails = {
-        'keyID': 'AKIA36EJB4OYMJ37Q46H',
-        'key': 'Bd3EW9liPdWQPvu/bAPed5r3kIcbOK8azk62yI5d',
+        'keyID': os.environ['KEY_ID'],
+        'key': os.environ['KEY'],
         'region': 'us-east-1',
         'endpoint': 'https://yoob6l7g3jbhne3esl2hhjkemy.appsync-api.us-east-1.amazonaws.com/graphql'
     }

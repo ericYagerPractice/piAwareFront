@@ -17,10 +17,6 @@
         "userPoolGroups": {}
       },
       "function": {
-        "piAwareMiddleLayer": {
-          "deploymentBucketName": "amplify-piawarefront-dev-222617-deployment",
-          "s3Key": "amplify-builds/piAwareMiddleLayer-2f65554258484c625872-build.zip"
-        },
         "piAwarePythonInvocation": {
           "deploymentBucketName": "amplify-piawarefront-dev-222617-deployment",
           "s3Key": "amplify-builds/piAwarePythonInvocation-4b62564744394b482f66-build.zip"

@@ -43,11 +43,6 @@
     }
   },
   "function": {
-    "piAwareMiddleLayer": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
     "piAwarePythonInvocation": {
       "build": true,
       "providerPlugin": "awscloudformation",
