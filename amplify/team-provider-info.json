@@ -23,7 +23,7 @@
         },
         "piAwarePythonInvocation": {
           "deploymentBucketName": "amplify-piawarefront-dev-222617-deployment",
-          "s3Key": "amplify-builds/piAwarePythonInvocation-596c5179447751645048-build.zip"
+          "s3Key": "amplify-builds/piAwarePythonInvocation-4b62564744394b482f66-build.zip"
         }
       }
     }

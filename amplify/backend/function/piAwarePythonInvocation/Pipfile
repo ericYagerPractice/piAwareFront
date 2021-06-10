@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 src = {editable = true, path = "./src"}
+requests-aws4auth = "*"
+boto3 = "*"
+gql = "*"
 
 [requires]
 python_version = "3.8"
