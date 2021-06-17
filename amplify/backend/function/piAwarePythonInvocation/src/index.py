@@ -31,7 +31,6 @@ def aircraftDataFunction(client, event):
     return queryOperation
 
 
-
 def clientConfiguration():
     configDetails = {
         'keyID': os.environ['KEY_ID'],
