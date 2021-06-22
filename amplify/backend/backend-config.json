@@ -25,17 +25,13 @@
   },
   "analytics": {},
   "api": {
-    "piAwareFrontAPI": {
+    "piawarefront": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7,
-              "description": "piKey"
-            }
+            "authenticationType": "AWS_IAM"
           },
           "additionalAuthenticationProviders": []
         }

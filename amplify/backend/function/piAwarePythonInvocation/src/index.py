@@ -36,7 +36,7 @@ def clientConfiguration():
         'keyID': os.environ['KEY_ID'],
         'key': os.environ['KEY'],
         'region': 'us-east-1',
-        'endpoint': 'https://yoob6l7g3jbhne3esl2hhjkemy.appsync-api.us-east-1.amazonaws.com/graphql'
+        'endpoint': 'https://q2zhpsalonfsngxmhgvvucqoii.appsync-api.us-east-1.amazonaws.com/graphql'
     }
 
     headers = {

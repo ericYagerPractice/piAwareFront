@@ -1,5 +1,5 @@
 {
-  "AppSyncApiName": "piAwareFrontAPI",
+  "AppSyncApiName": "piawarefront",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false
 }

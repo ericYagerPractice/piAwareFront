@@ -1,6 +1,6 @@
 projects:
-  piAwareFrontAPI:
-    schemaPath: amplify/backend/api/piAwareFrontAPI/build/schema.graphql
+  piawarefront:
+    schemaPath: src/graphql/schema.json
     includes:
       - src/graphql/**/*.js
     excludes:

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {getAircraftData } from '../graphql/queries'
-import {onCreateAircraftData} from '../customQueries/subscriptions'
+import {onCreateAircraftData} from '../graphql/subscriptions'
 import { API, graphqlOperation } from 'aws-amplify'
 
 export default function Map() {
@@ -10,7 +10,8 @@ export default function Map() {
 
     await API.graphql(graphqlOperation(onCreateAircraftData)).subscribe({
         next: ({ provider, value }) => {
-            API.graphql(graphqlOperation(getAircraftData, {id: value.data.onCreateAircraftData.id}))
+          console.log(value)  
+          API.graphql(graphqlOperation(getAircraftData, {id: value.data.onCreateAircraftData.id}))
             .then(value=>{
               try{
                 console.log(value)
