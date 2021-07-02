@@ -1,28 +1,28 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getAircraftData = /* GraphQL */ `
-  query GetAircraftData($id: ID!) {
-    getAircraftData(id: $id) {
+export const getAircraftData7fo2gqgduzeixltfai6c3v3dhaDev = /* GraphQL */ `
+  query GetAircraftData7fo2gqgduzeixltfai6c3v3dhaDev($id: String!) {
+    getAircraftData7fo2gqgduzeixltfai6c3v3dhaDev(id: $id) {
       id
       data
-      createdAt
-      updatedAt
     }
   }
 `;
-export const listAircraftDatas = /* GraphQL */ `
-  query ListAircraftDatas(
-    $filter: ModelAircraftDataFilterInput
+export const listAircraftData7fo2gqgduzeixltfai6c3v3dhaDevs = /* GraphQL */ `
+  query ListAircraftData7fo2gqgduzeixltfai6c3v3dhaDevs(
+    $filter: TableAircraftData7fo2gqgduzeixltfai6c3v3dhaDevFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listAircraftDatas(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listAircraftData7fo2gqgduzeixltfai6c3v3dhaDevs(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
       items {
         id
         data
-        createdAt
-        updatedAt
       }
       nextToken
     }

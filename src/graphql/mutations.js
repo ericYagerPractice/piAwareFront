@@ -1,42 +1,33 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createAircraftData = /* GraphQL */ `
-  mutation CreateAircraftData(
-    $input: CreateAircraftDataInput!
-    $condition: ModelAircraftDataConditionInput
+export const createAircraftData7fo2gqgduzeixltfai6c3v3dhaDev = /* GraphQL */ `
+  mutation CreateAircraftData7fo2gqgduzeixltfai6c3v3dhaDev(
+    $input: CreateAircraftData7fo2gqgduzeixltfai6c3v3dhaDevInput!
   ) {
-    createAircraftData(input: $input, condition: $condition) {
+    createAircraftData7fo2gqgduzeixltfai6c3v3dhaDev(input: $input) {
       id
       data
-      createdAt
-      updatedAt
     }
   }
 `;
-export const updateAircraftData = /* GraphQL */ `
-  mutation UpdateAircraftData(
-    $input: UpdateAircraftDataInput!
-    $condition: ModelAircraftDataConditionInput
+export const updateAircraftData7fo2gqgduzeixltfai6c3v3dhaDev = /* GraphQL */ `
+  mutation UpdateAircraftData7fo2gqgduzeixltfai6c3v3dhaDev(
+    $input: UpdateAircraftData7fo2gqgduzeixltfai6c3v3dhaDevInput!
   ) {
-    updateAircraftData(input: $input, condition: $condition) {
+    updateAircraftData7fo2gqgduzeixltfai6c3v3dhaDev(input: $input) {
       id
       data
-      createdAt
-      updatedAt
     }
   }
 `;
-export const deleteAircraftData = /* GraphQL */ `
-  mutation DeleteAircraftData(
-    $input: DeleteAircraftDataInput!
-    $condition: ModelAircraftDataConditionInput
+export const deleteAircraftData7fo2gqgduzeixltfai6c3v3dhaDev = /* GraphQL */ `
+  mutation DeleteAircraftData7fo2gqgduzeixltfai6c3v3dhaDev(
+    $input: DeleteAircraftData7fo2gqgduzeixltfai6c3v3dhaDevInput!
   ) {
-    deleteAircraftData(input: $input, condition: $condition) {
+    deleteAircraftData7fo2gqgduzeixltfai6c3v3dhaDev(input: $input) {
       id
       data
-      createdAt
-      updatedAt
     }
   }
 `;

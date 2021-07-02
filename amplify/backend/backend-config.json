@@ -24,20 +24,7 @@
     }
   },
   "analytics": {},
-  "api": {
-    "piawarefront": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "AWS_IAM"
-          },
-          "additionalAuthenticationProviders": []
-        }
-      }
-    }
-  },
+  "api": {},
   "function": {
     "piAwarePythonInvocation": {
       "build": true,

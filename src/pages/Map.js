@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {getAircraftData } from '../graphql/queries'
-import {onCreateAircraftData} from '../graphql/subscriptions'
+import {onCreateAircraftData7fo2gqgduzeixltfai6c3v3dhaDev} from '../graphql/subscriptions'
 import { API, graphqlOperation } from 'aws-amplify'
 
 export default function Map() {
@@ -8,7 +8,7 @@ export default function Map() {
 
   async function aircraftAPICall(){
 
-    await API.graphql(graphqlOperation(onCreateAircraftData)).subscribe({
+    await API.graphql(graphqlOperation(onCreateAircraftData7fo2gqgduzeixltfai6c3v3dhaDev)).subscribe({
         next: ({ provider, value }) => {
           console.log(value)  
           API.graphql(graphqlOperation(getAircraftData, {id: value.data.onCreateAircraftData.id}))
